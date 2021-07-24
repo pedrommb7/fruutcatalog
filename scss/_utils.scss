@@ -1,0 +1,63 @@
+/* ================================== */
+/* ======= MARGINS / PADDINGS ======= */
+/* ================================== */
+$sizes: (
+    'none': 0,
+    'full': $gridgutter, 
+    'double': $gridgutter * 2
+);
+@each $name, $size in $sizes {
+    @each $mode in margin, padding {
+        .#{$mode}#{$name} {
+            #{$mode}: $size !important;
+        }
+        .#{$mode}horizontal#{$name} {
+            #{$mode}-left: $size !important;
+            #{$mode}-right: $size !important;
+        }
+        .#{$mode}vertical#{$name} {
+            #{$mode}-top: $size !important;
+            #{$mode}-bottom: $size !important;
+        }
+        @each $side in top, right, bottom, left {
+            .#{$mode}#{$side}#{$name} {
+                #{$mode}-#{$side}: $size !important;
+            }
+        }
+    }
+}
+
+/* ==================== */
+/* ======= CARD ======= */
+/* ==================== */
+.cardfruut{
+    @extend .margintopfull;
+    width: 100%;
+    height: 85vh;
+    //background-color: $primary;
+    @media(min-width: $desktop){
+        height: 85vh;
+    }
+}
+
+/* ==================== */
+/* ======= BUTTONS ======= */
+/* ==================== */
+.buttons{
+    display: flex;
+    margin-top: 300px;
+}
+
+.button{
+    font-family: 'Poppins',Helvetica,Arial,Lucida,sans-serif;
+    border: 2px solid #FFFFFF;
+    border-color: #FFFFFF;
+}
+
+.button>p{
+    letter-spacing: 2px;
+}
+
+.no-bg{
+    background-color: transparent;
+}

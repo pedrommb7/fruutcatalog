@@ -1,0 +1,131 @@
+@import 'normalize';
+@import 'variables';
+@import 'utils';
+@import 'grid';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+@for $i from 1 through $gridcolumns {
+    .col-#{$i} {
+        box-sizing: border-box;
+        width: percentage($i/$gridcolumns); //width: 3/4 * 100
+        padding-left: $gridgutter / 2;
+        padding-right: $gridgutter / 2;
+    }
+    .offset#{$i} {
+        margin-left: percentage($i/$gridcolumns);
+    }
+}
+
+.col{
+    box-sizing: border-box;
+    padding-left: $gridgutter / 2;
+    padding-right: $gridgutter / 2;
+    flex: 1; //proporção; 1 = todas as cols têm a mesma proporção
+}
+
+p{
+    font-family: 'Poppins',Helvetica,Arial,Lucida,sans-serif;
+    font-weight: 500;
+}
+
+.center {
+    height: 45vh;
+    display: flex;
+    justify-content: center;
+}
+
+.left{
+    display: flex;
+    justify-content: flex-start;
+    height: 45vh;
+}
+.left>img{
+    margin-left: 100px;
+}
+
+.left>p{
+    margin-top: 100px;
+    margin-right: 150px;
+}
+
+.centerhashtag {
+    height: 3vh;
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+#pacote1{
+    transform: rotate(10deg);
+}
+#pacote4 {
+    transform: rotate(90deg);
+}
+#pacote2, #pacote5{
+    transform: rotate(-90deg);
+}
+#pacote7{
+    transform: rotate(-20deg);
+}
+#pacote10{
+    transform: rotate(180deg);
+}
+
+.expand{
+    position: absolute;
+    transform: scale(1.5) !important;
+    left: 188px;
+    top: 113px;
+    right: 100px;
+}
+
+.invisible{
+    opacity: 0;
+    pointer-events: none; //pointer-events: none para que não se clique nas imagens que ficam invisíveis
+}
+
+img {
+    transition: all 0.7s ease;
+}
+
+.box{
+    display: flex;
+    justify-content: flex-end;
+}
+
+#productcontent{
+    position: fixed;
+    width: 60%;
+    padding-left: 100px;
+    //background-color: black;
+    top: 5%; right: 5%;
+    height: 90vh; 
+    opacity: 0; 
+    pointer-events: none;
+}
+#productcontent>span{
+    margin-left: 150px;
+}
+
+.frase {
+    color: white;
+    font-size: 40px;
+    margin-top: 120px;
+}
+
+.content{
+    margin-left: 150px;
+}
+
+
+#sharebutton{
+    position: fixed;
+    width: 15%;
+    padding-left: 50px;
+    margin-right: 1000px;
+    background-color: black;
+    top: 5%; right: 5%;
+    height: 15vh;
+    opacity: 0;
+    pointer-events: none;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fruut Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css"
+        integrity="sha512-IgmDkwzs96t4SrChW29No3NXBIBv8baW490zk5aXvhCD8vuZM3yUSkbyTBcXohkySecyzIrUwiF/qV0cuPcL3Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link type="text/css" rel="stylesheet" href="style.css" />
+    <script src="js/scripts.js"></script>
+
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <main class="gridrow" draggable="true">
+        <!-- width: percentage($i/$gridcolumns);
+        1/6 * 100 = 16.66%
+        2/6 * 100 = 33.33%
+        3/6 * 100 = 50%
+        4/6 * 100 = 66.6%
+        5/6 * 100 = 83.33%
+        6/6 * 100 = 100% -->
+        <article class="col-6 col-t-6 col-d-6">
+            <div class="cardfruut center">
+                <img id="pacote1" onclick="expand(this);" src="images/pacote1.png" alt="pacote fruut">
+                <img id="pacote2" onclick="expand(this);" src="images/pacote2.png" alt="pacote fruut">
+                <img id="pacote3" onclick="expand(this);" src="images/pacote3.png" alt="pacote fruut">
+                <img id="pacote4" onclick="expand(this);" src="images/pacote4.png" alt="pacote fruut">
+                <img id="pacote5" onclick="expand(this);" src="images/pacote5.png" alt="pacote fruut">
+
+            </div>
+        </article>
+        <article class="col-6 col-t-6 col-d-6" id="share">
+            <div class="cardfruut center">
+                <img id="pacote6" onclick="expand(this);" src="images/pacote6.png" alt="pacote fruut">
+                <img id="pacote7" onclick="expand(this);" src="images/pacote7.png" alt="pacote fruut">
+                <img id="pacote8" onclick="expand(this);" src="images/pacote8.png" alt="pacote fruut">
+                <img id="pacote9" onclick="expand(this);" src="images/pacote1.png" alt="pacote fruut">
+                <img id="pacote10" onclick="expand(this);" src="images/pacote2.png" alt="pacote fruut">
+            </div>
+        </article>
+
+    </main>
+    <article id="productcontent">
+        <img src="images/metimehashtag.png" alt="metimehashtag">
+        <span class="content">
+            <p class="frase">Faz uma power nap na <br> pausa do almoço.</p>
+            <span class="buttons">
+                <!-- <img src="images/minusicon.svg" alt="share icon">
+                <img src="images/plusicon.svg" alt="share icon"> -->
+                <button class="button is-rounded is-active no-bg" style="color: white;">TALVEZ OUTRA PAUSA</button>
+                <button class="button is-rounded is-active" style="margin-left: 20px;">ESTA É A MINHA PAUSA</button>
+            </span>
+        </span>
+
+    </article>
+</body>
+
+
+</html>
